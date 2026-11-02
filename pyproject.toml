@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "softmax-cliff-lab"
+version = "0.1.0"
+description = "Reproduce and extend Barron et al. (arXiv:2610.31642): the two numerical bugs in standard softmax/cross-entropy, their fixes, and what they do to grokking and distillation"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24", "ml_dtypes>=0.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
